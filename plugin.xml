@@ -1,30 +1,26 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="org.binarypark.cordova.plugins.version" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>getAppVersion</name>
-    <description>Read the version of the App from config.xml and make it available in js</description>
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-compile-time" version="0.1.0">
+    <name>Compile Time</name>
+    <description>Read the compile time info of the App from cmd line and config.xml then make it available in js.</description>
     <license>MIT</license>
-    <keywords>cordova,appversion,version</keywords>
-    <repo>https://github.com/Binarypark/cordova_app_version_plugin.git</repo>
-    <issue>https://github.com/Binarypark/cordova_app_version_plugin/issues</issue>
-
-    <hook type="before_prepare" src="hooks/before_prepare/setVersionOnApp.js" />
-
-    <js-module name="getAppVersion" src="www/getAppVersion.js">
-        <clobbers target="cordova.plugins.version" />
+    <keywords>cordova,compiletime,version,env</keywords>
+    <repo>https://github.com/cncolder/cordova_compile_time_plugin.git</repo>
+    <issue>https://github.com/cncolder/cordova_compile_time_plugin/issues</issue>
+    <hook type="before_prepare" src="hooks/before_prepare/version.js"/>
+    <js-module name="version" src="www/compile-time/version.js">
+        <clobbers target="cordova.compileTime"/>
     </js-module>
-
     <engines>
-        <engine name="cordova" version=">=3.0.0" />
+        <engine name="cordova" version="&gt;=3.0.0"/>
     </engines>
-
-    <platform name="android"></platform>
-    <platform name="amazon-fireos"></platform>
-    <platform name="ubuntu"></platform>
-    <platform name="ios"></platform>
-    <platform name="blackberry10"></platform>
-    <platform name="wp7"></platform>
-    <platform name="wp8"></platform>
-    <platform name="windows8"></platform>
-    <platform name="windows"></platform>
-    <platform name="browser"></platform>
+    <platform name="android"/>
+    <platform name="amazon-fireos"/>
+    <platform name="ubuntu"/>
+    <platform name="ios"/>
+    <platform name="blackberry10"/>
+    <platform name="wp7"/>
+    <platform name="wp8"/>
+    <platform name="windows8"/>
+    <platform name="windows"/>
+    <platform name="browser"/>
 </plugin>
