@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-compile-time" version="0.3.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-compile-time" version="0.3.1">
     <name>Compile Time</name>
     <description>Read the compile time info of the App from config.xml and cmd line then make it available in js.</description>
     <license>MIT</license>
@@ -8,10 +8,6 @@
     <issue>https://github.com/cncolder/cordova_compile_time_plugin/issues</issue>
     <hook type="before_prepare" src="hooks/before_prepare/config.js"/>
     <js-module name="config" src="www/compile-time/config.js">
-        <clobbers target="cordova.compileTime"/>
-    </js-module>
-    <hook type="before_prepare" src="hooks/before_prepare/env.js"/>
-    <js-module name="env" src="www/compile-time/env.js">
         <clobbers target="cordova.compileTime"/>
     </js-module>
     <hook type="after_prepare" src="hooks/after_prepare/clean.js"/>

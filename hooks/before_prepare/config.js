@@ -3,6 +3,7 @@
 var fs = require('fs');
 
 module.exports = function(context) {
+  var env = / --release ?/.test(context.cmdLine) ? 'production' : 'development';
   var util = context.requireCordovaModule(
     'cordova-lib/src/cordova/util'
   );
@@ -16,6 +17,7 @@ module.exports = function(context) {
     name: xml.name(),
     description: xml.description(),
     author: xml.author(),
+    env: env,
   };
 
   fs.writeFileSync(
