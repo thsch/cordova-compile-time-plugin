@@ -10,6 +10,10 @@
     <js-module name="version" src="www/compile-time/version.js">
         <clobbers target="cordova.compileTime"/>
     </js-module>
+    <hook type="before_prepare" src="hooks/before_prepare/env.js"/>
+    <js-module name="env" src="www/compile-time/env.js">
+        <clobbers target="cordova.compileTime"/>
+    </js-module>
     <engines>
         <engine name="cordova" version="&gt;=3.0.0"/>
     </engines>
