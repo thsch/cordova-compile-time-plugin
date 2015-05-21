@@ -7,6 +7,6 @@ module.exports = function(context) {
 
   fs.writeFileSync(
     context.opts.plugin.dir + '/www/compile-time/env.js',
-    'module.exports.env = \'' + env + '\';'
+    'module.exports.env=\'' + env + '\''
   );
 };

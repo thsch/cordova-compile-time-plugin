@@ -6,8 +6,8 @@
     <keywords>cordova,compiletime,version,env</keywords>
     <repo>https://github.com/cncolder/cordova_compile_time_plugin.git</repo>
     <issue>https://github.com/cncolder/cordova_compile_time_plugin/issues</issue>
-    <hook type="before_prepare" src="hooks/before_prepare/version.js"/>
-    <js-module name="version" src="www/compile-time/version.js">
+    <hook type="before_prepare" src="hooks/before_prepare/config.js"/>
+    <js-module name="config" src="www/compile-time/config.js">
         <clobbers target="cordova.compileTime"/>
     </js-module>
     <hook type="before_prepare" src="hooks/before_prepare/env.js"/>
