@@ -14,15 +14,35 @@ The plugin will then be accessable via `window.cordova.compileTime.xxx`. xxx inc
 
 ## Usage
 ### config.xml example
-```
+```xml
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="my.app.id" version="1.5.0">
   <name>Example App</name>
+  <description>
+      An example app.
+  </description>
+  <author email="colder@example.com" href="http://vitarn.com">
+      ViTarn.com
+  </author>
 </widget>
 
 ```
-A call `window.cordova.compileTime.version` will return the version `"1.5.0"`.
-A call `window.cordova.compileTime.name` will return the name `"Example App"`.
+
+```js
+window.cordova.compileTime.id == "my.app.id";
+window.cordova.compileTime.name == "Example App";
+window.cordova.compileTime.version == "1.5.0";
+window.cordova.compileTime.description == "An example app.";
+window.cordova.compileTime.author == "ViTarn.com";
+```
+
+```bash
+> cordova build ios --release
+```
+
+```js
+window.cordova.compileTime.env == "production"; // "development" if no "--release"
+```
 
 ## How does it work?
 The plugins uses the `before_prepare` hook to generate javascript files in plugin own `www` folder which will be added to the App on build. It will clean these generate files `after_prepare`.
