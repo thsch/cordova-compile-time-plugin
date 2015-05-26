@@ -19,9 +19,14 @@ module.exports = function(context) {
     author: xml.author(),
     env: env,
   };
+  var www = context.opts.plugin.dir + '/www';
+
+  if (!fs.existsSync(www)) {
+    fs.mkdirSync(www);
+  }
 
   fs.writeFileSync(
-    context.opts.plugin.dir + '/www/compile-time/config.js',
+    context.opts.plugin.dir + '/www/compile-time.js',
     'module.exports=' + JSON.stringify(config)
   );
 };
