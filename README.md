@@ -49,7 +49,7 @@ The plugins uses the `before_prepare` hook to generate javascript files in plugi
 
 ## Changelog
 
-* 0.4.1
+* 0.4.2
   * publish to npm.
 * 0.3.3
   * dont clean because it will fail the other plugins install.
