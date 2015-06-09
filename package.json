@@ -1,0 +1,34 @@
+{
+    "author": "colder",
+    "cordova": {
+        "id": "cordova-plugin-compile-time",
+        "platforms": [
+            "firefoxos",
+            "tizen",
+            "android",
+            "amazon-fireos",
+            "ubuntu",
+            "ios",
+            "blackberry10",
+            "wp7",
+            "wp8",
+            "windows8",
+            "windows",
+            "browser"
+        ]
+    },
+    "description": "Read the version of the App from config.xml and make it available in js.",
+    "keywords": [
+        "cordova",
+        "compile",
+        "compiletime",
+        "ecosystem:cordova"
+    ],
+    "license": "Apache 2.0",
+    "name": "cordova-plugin-compile-time",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cncolder/cordova_compile_time_plugin.git"
+    },
+    "version": "0.4.0"
+}
