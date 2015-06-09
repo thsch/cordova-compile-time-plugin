@@ -30,5 +30,5 @@
         "type": "git",
         "url": "https://github.com/cncolder/cordova_compile_time_plugin.git"
     },
-    "version": "0.4.0"
+    "version": "0.4.1"
 }

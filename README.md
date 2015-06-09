@@ -1,4 +1,4 @@
-cordova_compile_time_plugin
+Cordova compile time plugin
 ==========================
 
 This plugin reads information of your app that you put in config.xml and makes it available inside your app via Javascript. 
@@ -8,7 +8,7 @@ This plugin reads information of your app that you put in config.xml and makes i
 ## Installation
 ### Cordova CLI
 ```
-cordova plugin add https://github.com/cncolder/cordova_compile_time_plugin
+cordova plugin add cordova-compile-time-plugin
 ```
 The plugin will then be accessable via `window.cordova.compileTime.xxx`. xxx include id / name / version / description / author / env.
 
@@ -49,6 +49,8 @@ The plugins uses the `before_prepare` hook to generate javascript files in plugi
 
 ## Changelog
 
+* 0.4.1
+  * publish to npm.
 * 0.3.3
   * dont clean because it will fail the other plugins install.
   * commit www. reason same as above.
